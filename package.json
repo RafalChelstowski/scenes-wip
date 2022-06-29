@@ -3,30 +3,89 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-three/cannon": "^6.3.0",
+    "@react-three/drei": "^9.13.0",
+    "@react-three/fiber": "^8.0.22",
+    "@react-three/gltfjsx": "^4.3.4",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
-    "@types/node": "^16.11.41",
-    "@types/react": "^18.0.14",
+    "@types/node": "^16.11.39",
+    "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "leva": "^0.9.27",
+    "lodash": "^4.17.21",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
-    "typescript": "^4.7.4",
-    "web-vitals": "^2.1.4"
+    "three": "^0.141.0",
+    "typescript": "^4.7.3",
+    "web-vitals": "^2.1.4",
+    "zustand": "^4.0.0-rc.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
     "extends": [
       "react-app",
-      "react-app/jest"
-    ]
+      "react-app/jest",
+      "airbnb",
+      "airbnb/hooks",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
+    ],
+    "plugins": [
+      "@typescript-eslint",
+      "prettier"
+    ],
+    "settings": {
+      "import/resolver": {
+        "typescript": {},
+        "node": {
+          "extensions": [
+            ".js",
+            ".jsx",
+            ".ts",
+            ".tsx"
+          ]
+        }
+      }
+    },
+    "rules": {
+      "react/react-in-jsx-scope": "off",
+      "prettier/prettier": "error",
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js",
+            ".jsx",
+            ".ts",
+            ".tsx"
+          ]
+        }
+      ],
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "ts": "never",
+          "tsx": "never"
+        }
+      ],
+      "import/prefer-default-export": "off",
+      "no-shadow": "off",
+      "@typescript-eslint/no-shadow": [
+        "error"
+      ]
+    }
   },
   "browserslist": {
     "production": [
@@ -39,5 +98,24 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.182",
+    "@types/three": "^0.141.0",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "autoprefixer": "^10.4.7",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "postcss": "^8.4.14",
+    "prettier": "2.6.2",
+    "tailwindcss": "^3.1.2"
   }
 }
