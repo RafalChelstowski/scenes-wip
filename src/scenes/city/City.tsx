@@ -96,8 +96,8 @@ useGLTF.preload('/city.gltf');
 
 const camPosArr: CamPos[] = [
   { id: '1', position: [-5, 0.2, 0], lookAt: [0, 1.5, 1] },
-  { id: '2', position: [-1.5, 1, -7], lookAt: [1, 3, -2] },
-  { id: '3', position: [0, 1, -1], lookAt: [1, 1.5, 2] },
+  { id: '2', position: [0, 1, 3], lookAt: [1, 1.5, 1] },
+  { id: '3', position: [0, 1, -1], lookAt: [1, 1.5, 1] },
 ];
 
 export function City() {
